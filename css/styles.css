@@ -1,0 +1,36 @@
+.container-cbo, .generateContainer, .readContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.hidden {
+    display: none;
+}
+
+.cbo {
+    cursor: pointer;
+}
+
+.generateForm {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.reader {
+    max-width: 400px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f9f9f9;
+}
+
+.centeredDiv {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Generador y lector de Códigos QR</title>
+        <link rel="stylesheet" href="css/bootstrap_4.5.2.min.css">
+        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="css/styles.css">
+    </head>
+    <body>
+        <div class="container-cbo">
+            <div class="form-check">
+                <input class="form-check-input cbo" type="radio" name="option" id="cboGenerateQR" value="generate">
+                <label class="form-check-label cbo" for="cboGenerateQR">
+                  Generar código QR
+                </label>
+              </div>&nbsp;
+              <div class="form-check">
+                <input class="form-check-input cbo" type="radio" name="option" id="cboReadQR" value="read">
+                <label class="form-check-label cbo" for="cboReadQR">
+                  Leer código QR
+                </label>
+              </div>
+        </div>
+
+        <div class="generateContainer hidden">
+            <div class="generateForm">
+                <h1 class="text-center mb-4">Generador de códigos QR</h1>
+                <form id="generateQR">
+                    <div class="form-group">
+                    <input type="text" class="form-control" id="name" placeholder="Nombre y Apellido" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block"><i class="fa fa-qrcode"></i> Generar código QR</button>
+                </form>
+            
+                <span class="mt-4"><b>Resultado:</b></span>
+                <p id="generatedResult"></p>
+                <div class="centeredDiv" id="qrCode"></div>
+                <br>
+                <button id="downloadBtn" class="btn btn-warning btn-block" style="display: none;"><i class="fas fa-download"></i> Descargar</button>
+                <button id="printBtn" class="btn btn-danger btn-block" style="display: none;"><i class="fas fa-file-pdf"></i> Imprimir</button>
+            </div>
+        </div>
+        
+        <div class="readContainer hidden">
+            <div class="reader">
+            <h1 class="text-center mb-4">Lector de códigos QR</h1>
+            <button id="readQR" class="btn btn-primary btn-block"><i class="fa fa-search"></i> Leer código QR</button>
+        
+            <span class="mt-4"><b>Resultado:</b></span>
+            <p id="generatedRead"></p>
+            <video class="hidden" id="qrCapture" style="width: 100%;"></video>
+            </div>
+        </div>
+
+        <script src="js/jquery-3.6.0.min.js"></script>
+        <script src="js/bootstrap_4.5.2.min.js"></script>   
+        <script type="text/javascript" src="js/instascan.min.js"></script> 
+        <script src="js/html2canvas.min.js"></script>
+        <script src="js/qrcode.min.js"></script>
+        <script src="js/index.js"></script>
+    </body>
+</html>
